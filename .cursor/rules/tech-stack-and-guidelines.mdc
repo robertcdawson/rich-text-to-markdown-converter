@@ -1,0 +1,86 @@
+---
+description: Tech stack and guidelines
+globs: 
+alwaysApply: false
+---
+# Tech Stack and Guidelines
+
+**Primary Framework:** React  
+React will be used to build the user interface and handle the client-side application logic. React’s component-based architecture, strong community support, and seamless integration with Vercel make it the ideal choice for this project.
+
+**Hosting and Deployment:**  
+- **Hosting Service:** Vercel  
+  Vercel provides optimized hosting for React applications, automatic HTTPS, and serverless function support.  
+- **Deployment Strategy:**  
+  - Configure a Git-based workflow so changes pushed to the main branch trigger automatic deployments.  
+  - Use Vercel’s preview deployments for every pull request to ensure all code is tested before going live.  
+  - Leverage Vercel’s built-in analytics and performance monitoring.
+
+**CSS and Styling:**  
+- **Preferred Approach:** CSS-in-JS or a modern CSS framework  
+  Consider using Tailwind CSS for a utility-first approach or styled-components for a component-based styling system.  
+- **Guidelines:**  
+  - Keep styles modular and scoped to components.  
+  - Ensure all UI elements are responsive and accessible.  
+  - Maintain consistent spacing, typography, and color usage.
+
+**State Management:**  
+- **Recommended Approach:** React’s built-in Context API  
+  Given the relatively simple nature of this project, React’s Context API should be sufficient for managing global state. Use best practices and the latest React features for state management.  
+- **Guidelines:**  
+  - Keep the state as local as possible to individual components.  
+  - If using Context, use only for truly shared data.  
+  - Document any complex state structures clearly.
+
+**Markdown Parsing and Conversion:**  
+- **Library Choice:** markdown-it or remark  
+  To handle rich text to Markdown conversion, use a robust Markdown parser like markdown-it or remark. These libraries provide reliable parsing and are easy to integrate into React components.  
+- **Guidelines:**  
+  - Sanitize input before parsing to avoid security risks.  
+  - Write clear utility functions for Markdown conversion so they’re easy to test and maintain.
+
+**Testing Frameworks:**  
+- **Unit Testing:** Jest  
+  Jest is a well-supported testing framework that integrates well with React.  
+- **Component Testing:** React Testing Library  
+  This library focuses on testing UI components from the user’s perspective, ensuring that the app behaves as intended.  
+- **Guidelines:**  
+  - Aim for 80% test coverage or higher.  
+  - Write tests for core logic and critical components.
+
+**Code Quality and Linting:**  
+- **ESLint Configuration:**  
+  - Use Airbnb’s ESLint configuration as a base.  
+  - Enforce strict rules for code consistency and readability.  
+  - Run ESLint checks as part of the CI pipeline.  
+- **Prettier:**  
+  - Use Prettier for code formatting.  
+  - Set up a pre-commit hook with lint-staged to auto-format code before commits.
+
+**Accessibility and Performance:**  
+- **Accessibility:**  
+  - Follow WCAG 2.1 AA standards.  
+  - Use semantic HTML and ARIA roles where appropriate.  
+  - Regularly test with screen readers and keyboard navigation.  
+- **Performance:**  
+  - Implement lazy loading for large components or images, if needed.  
+  - Use Vercel’s performance monitoring tools to identify bottlenecks. Work with the developer to integrate this.  
+  - Optimize build size by using tree-shaking and code splitting.
+
+**Development Workflow Guidelines:**  
+1. **Branching and Merging:**  
+   - Use a feature-branch workflow.  
+   - Merge changes into the main branch only after code review and testing.  
+2. **Pull Request (PR) Process:**  
+   - Keep PRs small and focused on a single feature or fix.  
+   - Write descriptive PR titles and detailed descriptions.  
+   - Require at least one code review approval before merging.  
+3. **Continuous Integration (CI):**  
+   - Run tests and linting on every push.  
+   - Use Vercel’s preview deployments to verify changes.  
+4. **Documentation:**  
+   - Maintain a well-organized `README.md`.  
+   - Document any custom scripts, state structures, or API integrations.  
+   - Keep the tech stack document up to date as new tools are added.
+
+By following these guidelines, the project will maintain high code quality, consistent styling, and a smooth development workflow while ensuring that the app is accessible, performant, and easy to maintain.

@@ -1,0 +1,32 @@
+---
+description: App description
+globs: 
+alwaysApply: false
+---
+# App Description
+
+**App Name:** Rich Text to Markdown Converter
+
+**Purpose:**  
+Rich Text to Markdown Converter is a simple, responsive web app designed to convert rich text into Markdown. It aims for general use but notably to also help users format text-based prompts for large language models (LLMs) by providing a structured, user-friendly interface. The app supports standard Markdown syntax, including formatting options like bold, italics, links, headers, lists, and blockquotes.
+
+**Target Audience:**  
+- Anyone looking for a lightweight, no-fuss Markdown editor for quick conversions.
+- Individuals crafting prompts for LLMs, such as AI researchers, developers, and content creators.  
+
+**Features:**  
+- **Rich Text Editor:**  
+  A WYSIWYG editor that makes it easy to create formatted text.  
+- **Markdown View:**  
+  A separate tab where users can view and copy the Markdown version of their rich text.  
+- **Keyboard Shortcuts:**  
+  Supports familiar shortcuts (e.g., **Cmd+B** for bold, **Cmd+I** for italics).  
+- **Responsive Design:**  
+  Optimized for both desktop and mobile devices, ensuring accessibility and usability.  
+- **Minimalist Interface:**  
+  A clean, simple design that eliminates distractions and keeps the focus on content creation.  
+- **Customizable Hints and Tips:**  
+  Optional guidance that can be shown or hidden as needed, helping new users get started without cluttering the UI.
+
+**Vision:**  
+To provide the best rich text-to-Markdown conversion experience, offering an intuitive, accessible, and responsive platform that seamlessly integrates into users’ workflows.

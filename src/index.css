@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: theme('colors.background');
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Basic Quill editor styles */
+.ql-editor {
+  min-height: 200px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Heading styles */
+.ql-editor h1 {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 2 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.ql-editor h2 {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.5 !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.ql-editor h3 {
+  font-size: 1.25rem !important;
+  font-weight: bold !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.4 !important;
+  padding-bottom: 0.3rem !important;
+}
+
+.ql-editor h4 {
+  font-size: 1.125rem !important;
+  font-weight: bold !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.4 !important;
+}
+
+.ql-editor h5 {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.5 !important;
+}
+
+.ql-editor h6 {
+  font-size: 0.875rem !important;
+  font-weight: bold !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Paragraph styles */
+.ql-editor p {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.6;
+}
+
+/* List styles */
+.ql-editor ul,
+.ql-editor ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.ql-editor li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote styles */
+.ql-editor blockquote {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  padding-left: 1rem !important;
+  border-left: 4px solid #e5e7eb !important;
+  font-style: italic !important;
+}
+
+/* Code block styles */
+.ql-editor pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.25rem;
+}
+
+/* Inline code styles */
+.ql-editor code {
+  padding: 0.2rem 0.4rem;
+  background-color: #f3f4f6;
+  border-radius: 0.25rem;
+  font-family: monospace;
+}
+
+/* Spacing between paragraphs */
+.ql-editor p+p {
+  margin-top: 1.5rem;
+}
+
+/* Extra spacing after headings */
+.ql-editor h1+p,
+.ql-editor h2+p,
+.ql-editor h3+p,
+.ql-editor h4+p,
+.ql-editor h5+p,
+.ql-editor h6+p {
+  margin-top: 1.25rem;
+}
+
+/* First heading in the editor */
+.ql-editor h1:first-child,
+.ql-editor h2:first-child,
+.ql-editor h3:first-child,
+.ql-editor h4:first-child,
+.ql-editor h5:first-child,
+.ql-editor h6:first-child {
+  margin-top: 0.5rem;
+}
+
+.markdown-preview {
+  font-family: theme('fontFamily.mono');
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.markdown-preview h1 {
+  @apply text-2xl font-bold my-4;
+  line-height: 1.2;
+}
+
+.markdown-preview h2 {
+  @apply text-xl font-bold my-3;
+  line-height: 1.3;
+}
+
+.markdown-preview h3 {
+  @apply text-lg font-bold my-2;
+  line-height: 1.4;
+}
+
+.markdown-preview h4 {
+  @apply text-base font-bold my-2;
+  line-height: 1.4;
+}
+
+.markdown-preview h5 {
+  @apply text-sm font-bold my-2;
+  line-height: 1.5;
+}
+
+.markdown-preview h6 {
+  @apply text-xs font-bold my-2;
+  line-height: 1.5;
+}
+
+.markdown-preview p {
+  @apply my-2;
+}
+
+.markdown-preview ul, .markdown-preview ol {
+  @apply pl-5 my-2;
+}
+
+.markdown-preview ul {
+  @apply list-disc;
+}
+
+.markdown-preview ol {
+  @apply list-decimal;
+}
+
+.markdown-preview blockquote {
+  @apply pl-4 border-l-4 border-gray-300 italic my-2;
+}
+
+.markdown-preview code {
+  @apply bg-gray-100 px-1 py-0.5 rounded;
+}
+
+.markdown-preview pre {
+  @apply bg-gray-100 p-2 rounded my-2 overflow-x-auto;
+}
+
+.markdown-preview a {
+  @apply text-primary underline;
+}

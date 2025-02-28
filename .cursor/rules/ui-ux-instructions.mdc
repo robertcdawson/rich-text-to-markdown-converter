@@ -1,0 +1,94 @@
+---
+description: UI/UX instructions
+globs: 
+alwaysApply: false
+---
+# UI/UX Guidelines
+
+**Goal:**  
+Create a clean, intuitive, and responsive user interface that supports efficient Markdown editing and conversion. Emphasize simplicity and ease of use while ensuring a consistent and visually appealing experience across all devices.
+
+---
+
+## **General Design Principles**
+1. **Simplicity:**  
+   - Use a minimalist layout that eliminates unnecessary clutter.  
+   - Focus on essential functionality—users should be able to start formatting and converting text immediately.
+2. **Clarity:**  
+   - Present clear and readable typography with high contrast between text and background.  
+   - Ensure that icons, buttons, and other elements are easily recognizable and labeled where necessary.
+3. **Consistency:**  
+   - Maintain uniform styles, colors, and spacing throughout the app.  
+   - Use a consistent grid system and establish a clear visual hierarchy.
+
+---
+
+## **Responsive Design**
+1. **Mobile-First Approach:**  
+   - Start by designing the interface for smaller screens, then adapt for larger displays.  
+   - Ensure all elements scale and reflow smoothly as the screen size changes.
+2. **Touch-Friendly UI:**  
+   - Ensure buttons and touch targets are large enough to tap easily.  
+   - Use appropriate padding to prevent accidental clicks.
+
+---
+
+## **Layout and Navigation**
+1. **Tab-Based Navigation:**  
+   - Implement tabs for switching between the rich text editor and Markdown view.  
+   - Use clear labels for each tab and provide immediate visual feedback when tabs are selected.
+2. **Intuitive Placement:**  
+   - Place the “Copy Markdown” button in a prominent, easily accessible location.  
+   - Keep frequently used formatting options visible and quick to access.
+
+---
+
+## **Typography and Styling**
+1. **Readable Fonts:**  
+   - Use a clean, sans-serif font for most UI elements.  
+   - Choose a monospace font for the Markdown preview for better readability and differentiation.
+2. **Consistent Sizing and Spacing:**  
+   - Establish a set of font sizes, weights, and line-heights for headings, body text, and UI elements.  
+   - Maintain consistent margins and padding to create a balanced, orderly interface.
+3. **Color and Contrast:**  
+   - Follow accessibility standards (WCAG AA) for color contrast.  
+   - Use a neutral background with a high-contrast primary color for action buttons.
+
+---
+
+## **Accessibility**
+1. **Keyboard Navigation:**  
+   - Ensure all controls are keyboard-navigable.  
+   - Support standard shortcuts (e.g., Tab, Shift+Tab) to move between interface elements.
+2. **Screen Reader Support:**  
+   - Label all interactive elements (buttons, tabs, fields) with accessible names.  
+   - Provide ARIA roles where appropriate to improve screen reader compatibility.
+
+---
+
+## **Interactions and Feedback**
+1. **Real-Time Updates:**  
+   - Provide instant visual feedback when applying formatting.  
+   - Reflect changes in the Markdown view immediately.
+2. **Feedback on Actions:**  
+   - Use subtle animations or highlights to confirm user actions (e.g., button presses, tab switches).  
+   - Display a brief confirmation message when the Markdown text is copied successfully.
+
+---
+
+## **Hints and Tips**
+1. **Optional Guidance:**  
+   - Include a help icon or toggle to show hints, with it hidden by default.  
+   - Keep tips concise, and only display them when a user explicitly requests help.
+
+---
+
+## **Testing and Validation**
+1. **Cross-Device Testing:**  
+   - Test the UI on multiple devices and browsers to ensure consistent behavior.  
+   - Confirm that touch interactions work as intended on both iOS and Android.
+2. **User Feedback:**  
+   - Conduct usability tests with a small group of target users.  
+   - Iterate on the design based on feedback to address pain points and improve the overall experience.
+
+By following these guidelines, the UI/UX will remain intuitive, visually consistent, and accessible, ensuring users can efficiently convert their rich text to Markdown and enjoy a seamless editing experience across all devices.

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import RichTextEditor from './components/RichTextEditor';
 import MarkdownPreview from './components/MarkdownPreview';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [activeTab, setActiveTab] = useState<'editor' | 'preview'>('editor');
@@ -26,7 +27,7 @@ function App() {
                 }`}
               onClick={() => setActiveTab('editor')}
             >
-              Rich Text Editor
+              <strong>Rich</strong> <em>Text</em> <u>Editor</u>
             </button>
             <button
               className={`px-4 py-2 text-sm font-medium ${activeTab === 'preview'
@@ -35,7 +36,7 @@ function App() {
                 }`}
               onClick={() => setActiveTab('preview')}
             >
-              Markdown Preview
+              # Markdown Preview
             </button>
           </div>
 
@@ -53,9 +54,7 @@ function App() {
           </div>
         </div>
       </main>
-      <footer className="container mx-auto px-4 py-6 text-center text-sm text-secondary">
-        <p>Rich Text to Markdown Converter &copy; {new Date().getFullYear()}</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

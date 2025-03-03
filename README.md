@@ -1,6 +1,6 @@
 # Rich Text to Markdown Converter
 
-A simple, responsive web app designed to convert rich text into Markdown. It aims for general use but notably to also help users format text-based prompts for large language models (LLMs) by providing a structured, user-friendly interface.
+A simple, responsive web app designed to convert rich text into Markdown.
 
 ## Features
 

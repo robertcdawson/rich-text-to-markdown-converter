@@ -3,6 +3,7 @@ import RichTextEditor from './components/RichTextEditor';
 import MarkdownPreview from './components/MarkdownPreview';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [activeTab, setActiveTab] = useState<'editor' | 'preview'>('editor');
@@ -55,6 +56,7 @@ function App() {
         </div>
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }

@@ -77,7 +77,12 @@ const processNode = (node: Node): string => {
           markdown += '*' + processNode(element) + '*';
           break;
         case 'u':
-          markdown += '_' + processNode(element) + '_';
+          markdown += '<u>' + processNode(element) + '</u>';
+          break;
+        case 's':
+        case 'strike':
+        case 'del':
+          markdown += '~~' + processNode(element) + '~~';
           break;
         case 'code':
           markdown += '`' + processNode(element) + '`';

@@ -18,14 +18,16 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ onChange, value = '' })
   };
 
   const modules = {
-    toolbar: [
-      [{ 'header': [1, 2, 3, false] }],
-      ['bold', 'italic', 'underline', 'strike'],
-      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-      ['blockquote', 'code-block'],
-      ['link'],
-      ['clean']
-    ],
+    toolbar: {
+      container: [
+        [{ 'header': [1, 2, 3, false] }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        ['blockquote', 'code-block'],
+        ['link'],
+        ['clean']
+      ]
+    },
     clipboard: {
       // Preserve proper spacing when pasting content
       matchVisual: false
@@ -39,6 +41,42 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ onChange, value = '' })
     'blockquote', 'code-block',
     'link'
   ];
+
+  // Add keyboard bindings
+  React.useEffect(() => {
+    const buttons = document.querySelectorAll('.ql-toolbar button');
+    const tooltips: { [key: string]: string } = {
+      bold: 'Bold (⌘+B)',
+      italic: 'Italic (⌘+I)',
+      underline: 'Underline (⌘+U)',
+      strike: 'Strikethrough',
+      'header[value="1"]': 'Heading 1 (⌘+1)',
+      'header[value="2"]': 'Heading 2 (⌘+2)',
+      'header[value="3"]': 'Heading 3 (⌘+3)',
+      'list[value="ordered"]': 'Numbered List (⌘+Shift+7)',
+      'list[value="bullet"]': 'Bullet List (⌘+Shift+8)',
+      blockquote: 'Blockquote (⌘+Shift+.)',
+      'code-block': 'Code Block (⌘+Shift+C)',
+      link: 'Link (⌘+K)',
+      clean: 'Clear Formatting'
+    };
+
+    buttons.forEach(button => {
+      const format = Array.from(button.classList)
+        .find(className => className.startsWith('ql-'))
+        ?.replace('ql-', '');
+
+      if (format) {
+        const value = button.getAttribute('value');
+        const tooltipKey = value ? `${format}[value="${value}"]` : format;
+        const tooltip = tooltips[tooltipKey];
+
+        if (tooltip) {
+          button.setAttribute('title', tooltip);
+        }
+      }
+    });
+  }, []);
 
   return (
     <div className="rich-text-editor custom-quill-container">

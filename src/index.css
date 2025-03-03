@@ -28,59 +28,42 @@ code {
 .ql-editor h1 {
   font-size: 2rem !important;
   font-weight: bold !important;
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
   line-height: 2 !important;
-  padding-bottom: 0.5rem !important;
 }
 
 .ql-editor h2 {
   font-size: 1.5rem !important;
   font-weight: bold !important;
-  margin-top: 1.75rem !important;
-  margin-bottom: 0.75rem !important;
   line-height: 1.5 !important;
-  padding-bottom: 0.5rem !important;
 }
 
 .ql-editor h3 {
   font-size: 1.25rem !important;
   font-weight: bold !important;
-  margin-top: 1.5rem !important;
-  margin-bottom: 0.5rem !important;
   line-height: 1.4 !important;
-  padding-bottom: 0.3rem !important;
 }
 
 .ql-editor h4 {
   font-size: 1.125rem !important;
   font-weight: bold !important;
-  margin-top: 1.25rem !important;
-  margin-bottom: 0.5rem !important;
   line-height: 1.4 !important;
 }
 
 .ql-editor h5 {
   font-size: 1rem !important;
   font-weight: bold !important;
-  margin-top: 1.25rem !important;
-  margin-bottom: 0.5rem !important;
   line-height: 1.5 !important;
 }
 
 .ql-editor h6 {
   font-size: 0.875rem !important;
   font-weight: bold !important;
-  margin-top: 1.25rem !important;
-  margin-bottom: 0.5rem !important;
   line-height: 1.5 !important;
 }
 
 /* Paragraph styles */
 .ql-editor p {
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 /* List styles */
@@ -121,11 +104,6 @@ code {
   font-family: monospace;
 }
 
-/* Spacing between paragraphs */
-.ql-editor p+p {
-  margin-top: 1.5rem;
-}
-
 /* Extra spacing after headings */
 .ql-editor h1+p,
 .ql-editor h2+p,
@@ -133,17 +111,7 @@ code {
 .ql-editor h4+p,
 .ql-editor h5+p,
 .ql-editor h6+p {
-  margin-top: 1.25rem;
-}
-
-/* First heading in the editor */
-.ql-editor h1:first-child,
-.ql-editor h2:first-child,
-.ql-editor h3:first-child,
-.ql-editor h4:first-child,
-.ql-editor h5:first-child,
-.ql-editor h6:first-child {
-  margin-top: 0.5rem;
+  margin: 1rem 0;
 }
 
 .markdown-preview {
@@ -212,4 +180,10 @@ code {
 
 .markdown-preview a {
   @apply text-primary underline;
+}
+
+/* Ensure tooltips don't get cut off */
+.ql-toolbar {
+  position: relative;
+  z-index: 10;
 }

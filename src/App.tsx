@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import RichTextEditor from './components/RichTextEditor';
-import MarkdownPreview from './components/MarkdownPreview';
+import MarkdownEditor from './components/MarkdownEditor';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
-  const [activeTab, setActiveTab] = useState<'editor' | 'preview'>('editor');
+  const [activeTab, setActiveTab] = useState<'editor' | 'markdown'>('editor');
   const [markdownContent, setMarkdownContent] = useState<string>('');
   const [richTextContent, setRichTextContent] = useState<string>('');
 
   const handleRichTextChange = (content: string, markdown: string) => {
     setRichTextContent(content);
     setMarkdownContent(markdown);
+  };
+
+  const handleMarkdownChange = (markdown: string, html: string) => {
+    setMarkdownContent(markdown);
+    setRichTextContent(html);
   };
 
   return (
@@ -31,13 +36,13 @@ function App() {
               <strong>Rich</strong> <em>Text</em> <u>Editor</u>
             </button>
             <button
-              className={`px-4 py-2 text-sm font-medium ${activeTab === 'preview'
+              className={`px-4 py-2 text-sm font-medium ${activeTab === 'markdown'
                 ? 'text-primary border-b-2 border-primary'
                 : 'text-secondary hover:text-primary'
                 }`}
-              onClick={() => setActiveTab('preview')}
+              onClick={() => setActiveTab('markdown')}
             >
-              # Markdown Preview
+              # Markdown
             </button>
           </div>
 
@@ -48,8 +53,9 @@ function App() {
                 onChange={handleRichTextChange}
               />
             ) : (
-              <MarkdownPreview
+              <MarkdownEditor
                 markdown={markdownContent}
+                onChange={handleMarkdownChange}
               />
             )}
           </div>

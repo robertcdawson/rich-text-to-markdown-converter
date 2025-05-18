@@ -166,4 +166,3 @@ const processListItems = (listElement: HTMLElement, marker: string): string => {
   return markdown;
 };
 
-export default convertToMarkdown; 

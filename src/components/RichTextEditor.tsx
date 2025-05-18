@@ -91,6 +91,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ onChange, value = '' })
         modules={modules}
         formats={formats}
         placeholder="Start typing here..."
+        readOnly={false}
         className="custom-quill-editor"
       />
       <div className="mt-4 text-sm text-secondary">

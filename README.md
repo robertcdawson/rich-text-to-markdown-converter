@@ -49,7 +49,7 @@ A simple, responsive web app designed to convert rich text into Markdown.
 ## Usage
 
 1. Type and format your text in the Rich Text Editor tab using the toolbar or keyboard shortcuts.
-2. Switch to the Markdown Editor tab to see and edit the generated Markdown.
+2. Switch to the Markdown Editor tab to see or modify the generated Markdown.
 3. Click the "Copy Markdown" button to copy the Markdown to your clipboard.
 
 ## License

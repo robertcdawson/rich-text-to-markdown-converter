@@ -5,7 +5,7 @@ A simple, responsive web app designed to convert rich text into Markdown.
 ## Features
 
 - **Rich Text Editor:** A WYSIWYG editor that makes it easy to create formatted text.
-- **Markdown View:** A separate tab where users can view and copy the Markdown version of their rich text.
+- **Markdown Editor:** A separate tab where users can edit or copy the Markdown version of their rich text. Changes sync back to the rich text editor.
 - **Keyboard Shortcuts:** Supports familiar shortcuts (e.g., **Cmd+B** for bold, **Cmd+I** for italics).
 - **Responsive Design:** Optimized for both desktop and mobile devices, ensuring accessibility and usability.
 - **Minimalist Interface:** A clean, simple design that eliminates distractions and keeps the focus on content creation.
@@ -49,7 +49,7 @@ A simple, responsive web app designed to convert rich text into Markdown.
 ## Usage
 
 1. Type and format your text in the Rich Text Editor tab using the toolbar or keyboard shortcuts.
-2. Switch to the Markdown Preview tab to see the generated Markdown.
+2. Switch to the Markdown Editor tab to see and edit the generated Markdown.
 3. Click the "Copy Markdown" button to copy the Markdown to your clipboard.
 
 ## License

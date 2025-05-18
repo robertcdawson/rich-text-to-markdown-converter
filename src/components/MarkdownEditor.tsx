@@ -20,7 +20,8 @@ const MarkdownEditor: React.FC<MarkdownEditorProps> = ({ markdown, onChange }) =
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
-    const html = DOMPurify.sanitize(marked.parse(value));
+    const parsedMarkdown = marked.parse(value, { async: false }) as string;
+    const html: string = DOMPurify.sanitize(parsedMarkdown);
     onChange(value, html);
   };
 

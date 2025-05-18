@@ -19,4 +19,4 @@ declare module './components/MarkdownEditor' {
 declare module './components/Header' {
   const Header: React.FC;
   export default Header;
-} 
+}

@@ -1,17 +1,19 @@
 declare module './components/RichTextEditor' {
   interface RichTextEditorProps {
-    onChange: (markdown: string) => void;
+    onChange: (content: string, markdown: string) => void;
+    value?: string;
   }
   const RichTextEditor: React.FC<RichTextEditorProps>;
   export default RichTextEditor;
 }
 
-declare module './components/MarkdownPreview' {
-  interface MarkdownPreviewProps {
+declare module './components/MarkdownEditor' {
+  interface MarkdownEditorProps {
     markdown: string;
+    onChange: (markdown: string, html: string) => void;
   }
-  const MarkdownPreview: React.FC<MarkdownPreviewProps>;
-  export default MarkdownPreview;
+  const MarkdownEditor: React.FC<MarkdownEditorProps>;
+  export default MarkdownEditor;
 }
 
 declare module './components/Header' {

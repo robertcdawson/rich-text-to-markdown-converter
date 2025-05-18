@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { convertToMarkdown } from '../utils/markdownConverter';
@@ -10,6 +10,10 @@ interface RichTextEditorProps {
 
 const RichTextEditor: React.FC<RichTextEditorProps> = ({ onChange, value = '' }) => {
   const [editorContent, setEditorContent] = useState(value);
+
+  useEffect(() => {
+    setEditorContent(value);
+  }, [value]);
 
   const handleChange = (content: string) => {
     setEditorContent(content);
@@ -87,6 +91,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ onChange, value = '' })
         modules={modules}
         formats={formats}
         placeholder="Start typing here..."
+        readOnly={false}
         className="custom-quill-editor"
       />
       <div className="mt-4 text-sm text-secondary">
